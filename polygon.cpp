@@ -16,14 +16,14 @@ void setSideOfPolygon(Polygon &a) {
     for (int i = 0; i < a.PolygonSides; i++) {
         cout << "Nhap chieu dai canh thu "<<i+1<<" cua da giac: ";
         cin >> a.length[i];
-        while (a.length[i] <= 0) {
-            cout << "Chieu dai canh khong hop le\n";
-            cin>>a.length[i];
+        while (a.PolygonSides <= 2) {
+            cout << "So canh khong hop le.\n";
+            cin>>a.PolygonSides;
         }
     }
 }
 
-int PerimeterOfPolygon(Polygon &a) {
+float PerimeterOfPolygon(Polygon &a) {
     int P = 0;
     for (int i = 0; i < a.PolygonSides; i++)
         P += a.length[i];
